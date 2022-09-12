@@ -1,0 +1,84 @@
+{% extends "landing_blank.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+ 
+
+
+{% block extra_js %}
+{{ form.media.js }}
+
+
+{% endblock %}
+
+{% block style %}
+ .fix-width{
+ width:100%;
+}
+
+ {% endblock %}
+{% block content %}
+
+{% if title %}
+{% endif %}
+<div class='row'>
+	{% include 'messages_animate.html' %}
+	<div class='col-sm-8 border-title-curve col-sm-offset-3 '  >
+	<h1>{% trans  'Popunite podatke za prijavu'  %}</h1>
+
+	</div>
+</div>
+	
+
+
+
+<div classs ='row'>
+
+
+	<div class='col-sm-6 col-sm-offset-1 form-bg' style="border-radius:8px; margin-bottom: 200px;"> 
+
+	{% if request.user.is_staff %}
+
+	<a class="btn btn-md  btn-primary display-4" href="/admin/">ADMINISTRATORI</a></div>
+	 Vi ste administrator mozete na administrator stranicu.
+
+	{% else %}
+
+
+	<p class=" label-form-user label-info">{% trans  'Popunite sva polja ' %}</p>	
+	<form method='POST' action=''  enctype='multipart/form-data'>{% csrf_token %}
+
+	{{form|crispy}}
+
+	<input  style="margin-bottom:5px;" class="btn btn-primary" type ='submit' value =" Pošalji"/> 
+	<p class=" label-form-user label-info">{% trans  'Pošaljite svoju prijavu ' %}</p>	
+
+	<p class=" label-form-user label-info">
+	Popunjenost smjerova: <br>
+	Tehnološki:{{course_obj.number}} , LIMIT:{{course_obj.limit}}<br>
+	Informatički:{{courseInformatic_obj.number}} , LIMIT:{{courseInformatic_obj.limit}}<br>
+	Matematički:{{mathCourse_obj.number}} , LIMIT:{{mathCourse_obj.limit}}<br>
+
+	</p>	
+
+
+
+	</form>
+	<a href="{% url 'students:user_detail' %}">{%  trans "Prijava" %}</a>
+	{% endif %}
+	</div>
+</div>
+
+
+
+
+
+</div>
+</div>
+
+{% endblock %}
+
+{%  block script %}
+
+
+{% endblock %}

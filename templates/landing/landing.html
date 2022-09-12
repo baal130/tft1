@@ -1,0 +1,185 @@
+{% load staticfiles %}
+{%  load i18n %}
+{% load cache %}
+<!DOCTYPE html>
+<html  >
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="{% static 'landing/Falcon_email.png' %}">
+
+ 
+ 
+  <title>TFT</title>  
+  
+  
+  <link rel="stylesheet" href="{% static 'landing/assets/web/assets/mobirise-icons2/mobirise2.css'%}">
+  <link rel="stylesheet" href="{% static 'landing/assets/web/assets/mobirise-icons/mobirise-icons.css'%}">
+  <link rel="stylesheet" href="{% static 'landing/assets/icon54-v3/style.css'%}">
+  <link rel="stylesheet" href="{% static 'landing/assets/icon54-v4/style.css'%}">
+  <link rel="stylesheet" href="{% static 'landing/assets/iconsMind/style.css'%}">
+  <link rel="stylesheet" href="{% static 'landing/assets/bootstrap/css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{% static 'landing/assets/bootstrap/css/bootstrap-grid.min.css'%}">
+  <link rel="stylesheet" href="{% static 'landing/assets/bootstrap/css/bootstrap-reboot.min.css'%}">
+  <link rel="stylesheet" href="{% static 'landing/assets/web/assets/gdpr-plugin/gdpr-styles.css'%}">
+  <link rel="stylesheet" href="{% static 'landing/assets/tether/tether.min.css'%}">
+  <link rel="stylesheet" href="{% static 'landing/assets/animatecss/animate.min.css'%}">
+  <link rel="stylesheet" href="{% static 'landing/assets/chatbutton/floating-wpp.css'%}">
+  <link rel="stylesheet" href="{% static 'landing/assets/dropdown/css/style.css'%}">
+  <link rel="stylesheet" href="{% static 'landing/assets/socicon/css/styles.css'%}">
+  <link rel="stylesheet" href="{% static 'landing/assets/theme/css/style.css'%}">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="{% static 'landing/assets/mobirise/css/mbr-additional.css'%}"><link rel="stylesheet" href="{% static 'landing/assets/mobirise/css/mbr-additional.css'%}" type="text/css">
+
+
+
+
+ <style >
+      .sign-doctor-link>a:hover{
+   /*background-color:rgba(42, 90, 139, 0.5)!important;*/
+ background: rgb(119, 131, 158)!important;
+background: -moz-linear-gradient(0deg, rgb(119, 131, 158) 0%, rgb(116, 177, 239) 60%, rgb(90, 122, 155) 100%)!important;
+background: -webkit-linear-gradient(0deg, rgb(119, 131, 158) 0%, rgb(116, 177, 239) 60%, rgb(90, 122, 155) 100%)!important;
+background: linear-gradient(0deg, rgb(119, 131, 158) 0%, rgb(116, 177, 239) 60%, rgb(90, 122, 155) 100%)!important;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#31456f",endColorstr="#366faa",GradientType=1);
+color:white;
+}
+.sign-doctor-link>a{
+ text-align: left;
+ padding-left: 5px;
+ border-radius: 5px;
+ padding: 2px; 
+ background: rgb(119, 131, 158)!important;
+background: -moz-linear-gradient(0deg, rgb(113, 215, 255) 0%, rgb(99, 203, 248) 20%, rgb(197, 227, 239) 100%)!important;
+background: -webkit-linear-gradient(0deg, rgb(113, 215, 255) 0%, rgb(99, 203, 248) 20%, rgb(197, 227, 239) 100%)!important;
+background: linear-gradient(0deg, rgb(113, 215, 255) 0%, rgb(99, 203, 248) 20%, rgb(197, 227, 239) 100%)!important;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#31456f",endColorstr="#366faa",GradientType=1);
+color: white;
+}
+
+}
+
+
+
+
+
+
+.rating-align-bottom{
+position: absolute;
+    bottom: 10%;
+}
+.rating-align-bottom-google{
+position: absolute;
+    bottom: 17%;
+}
+.dropdown-menu-edit{
+  min-width: 200px;
+}
+.post-thumb-max{
+  max-height: 100px;
+  min-height: 22vh;
+} 
+
+
+.success{
+  background: #dfd;
+  color: #333;
+  padding: 15px;
+}
+.error{
+  background: #fadcdc;
+  color: #333;
+  padding: 15px;
+}
+.info{
+  background: #dfd;
+  color: #333;
+  padding: 15px;
+}
+
+.percent{
+  z-index: 11;
+  position: relative;
+  font-size: 1.9em;
+ right: -20px;
+ color: #ffffff;
+}
+@media (min-width: 768px){
+.percent{
+   z-index: 11;
+  position: relative;
+  font-size: 1.7em;
+  right: -8px;
+  color: #ffffff;
+}
+}
+@media (max-width: 767px){
+  .buton-width{
+    width:60%;
+}  
+}
+@media (min-width: 767px){
+  .buton-width{
+    width:40%;
+}  
+}
+
+
+
+ </style>
+
+
+
+
+  
+ 
+
+<body>
+  
+  <section class="menu cid-s0Kd5hW5Yy" once="menu" id="menu1-u">
+
+    {% include "landingnavbar.html" %}
+
+</section>
+<section class="cid-qTkA127IK8 mbr-fullscreen " id="header2-1">
+
+ 
+   <a class="btn btn-md  btn-secondary display-4" href="{% url 'students:user_detail' %}">PRIJAVA</a></div>
+   <a class="btn btn-md  btn-primary display-4" href="/admin/">ADMINISTRATORI</a></div>
+ 
+</section>
+
+
+
+<section class="features6 cid-szd9BYb1sW" id="features06-25">
+    
+    <div class="container">
+{% block content %}
+
+
+    
+{% endblock %}
+
+ </div> 
+
+    
+   
+</section>
+
+
+<!-- footer  -->
+
+
+<section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;"><a href="https://mobirise.site/r" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;"><a href="" style="color:#aaa;"></a> </p></section>
+
+{% include "landing_js_common.html" %}
+  
+  
+ {% include "landingfooter.html" %} 
+
+ </body>
+</html>

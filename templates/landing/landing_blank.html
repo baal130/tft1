@@ -1,0 +1,154 @@
+{% load staticfiles %}
+{% load l10n %}
+{%  load i18n %}
+<!-- emtpy base  -->
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- css file -->
+<link rel="stylesheet" href=" {% static 'template/css/bootstrap.min.css'%}"> 
+<link rel="stylesheet" href=" {% static 'template/css/style.css'%}">
+<link rel="stylesheet" href="{% static 'template/css/theme-color.css'%}">
+<!-- Responsive stylesheet -->
+<link rel="stylesheet" href="{% static 'template/css/responsive.css'%}">
+<!-- Title -->
+<link href="{% static 'css/animate.css'%}" rel="stylesheet"/>
+<link rel="stylesheet" href="{% static 'css/animate.min.css'%}" />
+<link rel="stylesheet" href="{% static 'css/animateSpeed.css'%}" />
+<title>TFT{% if title %}|{{title}} {% endif %} </title>
+<!-- Favicon -->
+
+
+
+
+<script type="text/javascript" src="{% static 'template/js/jquery-1.12.4.js'%}"></script>
+   
+
+{% block head_extra  %} 
+
+{% endblock head_extra  %}
+
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+  <style>
+    {% block style %}
+    
+    {% endblock %}
+    </style>
+<style>    
+
+  .success{
+  background: #dfd;
+  color: #333;
+  padding: 15px;
+}
+.error{
+  background: #fadcdc;
+  color: #333;
+  padding: 15px;
+}
+
+</style>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- Header Header Top -->
+  {%  if request.user.is_authenticated %}
+
+  {{user}}  <a  class="text-white dropdown-item display-4" href="{% url 'account_logout'%}"><span style=" background-color: #122c;
+                                                    border-radius: 5px;
+                                                    padding: 7px!important;
+                                                     margin-right: 3px;">
+                                                {% trans "Odlogiraj" %} </span>  
+                                                </a>
+  {% endif %}
+   
+  <!-- Home Design -->
+  
+<div class="container">
+{% block content %}
+
+
+    
+{% endblock %}
+
+ </div>   
+
+  <!-- Our Footer -->
+
+
+<a class="scrollToHome" href="#"><i class="fa fa-home"></i></a>
+</div>
+<!-- Wrapper End -->
+
+<script type="text/javascript" src="{% static 'template/js/bootstrap.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'template/js/bootsnav.js'%}"></script>
+<script type="text/javascript" src="{% static 'template/js/parallax.js'%}"></script>
+<script type="text/javascript" src="{% static 'template/js/scrollto.js'%}"></script>
+<!-- <script type="text/javascript" src="{% static 'template/js/jquery-scrolltofixed-min.js'%}"></script> -->
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollToFixed/1.0.8/jquery-scrolltofixed-min.js"></script>
+<script type="text/javascript" src="{% static 'template/js/jquery.counterup.js'%}"></script>
+<script type="text/javascript" src="{% static 'template/js/gallery.js'%}"></script>
+<script type="text/javascript" src="{% static 'template/js/wow.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'template/js/slider.js'%}"></script>
+<script type="text/javascript" src="{% static 'template/js/video-player.js'%}"></script>
+<script type="text/javascript" src="{% static 'template/js/jquery.barfiller.js'%}"></script>
+<script type="text/javascript" src="{% static 'template/js/timepicker.js'%}"></script>
+<script type="text/javascript" src="{% static 'template/js/tweetie.js'%}"></script>
+<script type="text/javascript" src="{% static 'template/js/validator.js'%}"></script>
+<script type="text/javascript" src="{% static 'template/js/form-script.js'%}"></script>
+<script src="{% static 'constrainedfilefield/js/file_checker.js' %}"></script>
+<!-- Google Map Javascript Codes -->
+
+
+<!-- Custom script for all pages --> 
+<script type="text/javascript" src="{% static 'template/js/script.js'%}"></script>
+<script> 
+
+</script>
+
+
+
+
+{% block extra_js %}
+
+{% endblock %}
+ 
+{% localize off %}
+
+
+
+
+<script src="{% static 'js/jquery.bootstrap.modal.forms.js' %}">
+  
+
+
+  
+</script>
+
+
+
+
+
+{% block script %}
+
+{% endblock %}
+
+
+{% endlocalize %}
+
+</body>
+</html>

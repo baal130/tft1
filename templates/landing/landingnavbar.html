@@ -1,0 +1,77 @@
+ {% load staticfiles %}
+{%  load i18n %}
+ <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm bg-color transparent">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="/">
+                      
+                        
+                          <img src="{% static 'landing/Falcon_email.png' %}" alt="" title="" style="height: 3.9rem;">
+                         <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="">TFT</a></span>
+                    </a>
+                </span>
+            
+                  
+                      
+            </div>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+               <li class="nav-item dropdown"><a class="nav-link link text-white dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" aria-expanded="true"><span class="mobi-mbri mobi-mbri-globe-2 mbr-iconfont mbr-iconfont-btn"></span>
+                        
+                        </a>
+                        
+                       
+                                        
+                                        
+                        </li>  
+               
+                {%  if request.user.is_authenticated %}
+                
+                  
+                        <li class="nav-item dropdown"><a class="nav-link link text-white dropdown-toggle display-4" href="https://mobirise.co" data-toggle="dropdown-submenu" aria-expanded="true"><span class="mbri-user mbr-iconfont mbr-iconfont-btn"></span>
+                        
+                        {{user}}</a>
+                        <div class="dropdown-menu">
+                        
+                          
+                                                <a  class="text-white dropdown-item display-4" href="{% url 'account_logout'%}"><span style=" background-color: #5564ac;
+                                                    border-radius: 5px;
+                                                    padding: 7px!important;
+                                                     margin-right: 3px;">
+                                                {% trans "Odlogiraj" %} </span>  {{user}}
+                                                </a>
+                        </div>
+                       
+                                        
+                                        
+                        </li>  
+                                
+                 {% else %}
+                               
+                <li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="{% url 'account_login' %}"><span class="mbri-key mbr-iconfont mbr-iconfont-btn"></span>
+                        
+                        {% trans "Ulogiraj se " %} </a>
+                </li>
+                {% endif %}                   
+                
+            </ul>
+            <div class="navbar-buttons mbr-section-btn">
+
+              
+               
+              
+            </span></div>
+        </div>
+    </nav>
