@@ -12,7 +12,7 @@
 
 		<p>{% blocktrans %}Vec imate račun? Molim  <a href="{{ login_url }}">logirajte se</a>.{% endblocktrans %}</p>
 
-		{% load socialaccount %}
+		
 		{% providers_media_js %}
 		
 		
@@ -29,20 +29,6 @@
 
 
 	
-	<div class="col-sm-12 col-md-6 col-md-offset-3">
-				        						        <form class="ulockd-reg-form text-center row">
-				        						        	<h3> <span class="flaticon-house-key"></span> {% trans "ILI koristi" %} </h3>
-				        						        	
-													       
-													        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-6">
-													        	<a href="{% provider_login_url "facebook" method="oauth2" %}" class="btn btn-lg btn-primary btn-block color-white">Facebook</a>
-													        	
-													        </div>
-													        
-													        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-6">
-													        	<a href="{% provider_login_url "twitter" method="" %}" class="btn btn-lg btn-info btn-block color-white">Twitter</a>
-													        </div>
-				        						        </form>
-				        				      		</div>
+	
 </div> <!-- row -->
 {% endblock %}
