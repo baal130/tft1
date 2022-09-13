@@ -47,9 +47,9 @@ class StudentDetails(models.Model):
 	totalgraduationgrade=models.DecimalField(decimal_places=2, max_digits=4, default=3.00,validators=[MaxValueValidator(5),MinValueValidator(0)])
 	
 	noteforadmin =models.TextField(blank=True, null=True)
-	aproved_by = models.OneToOneField(User, on_delete=models.CASCADE)
+	aproved_by = models.ManyToManyField(User, related_name="aproved")
 	approved= models.BooleanField(default=False)
-	aproved_date=models.DateTimeField(auto_now_add=True,auto_now=True)
+	aproved_date=models.DateTimeField(auto_now=True)
 
 	
 	
