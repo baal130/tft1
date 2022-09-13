@@ -18,6 +18,8 @@ class StudentDetailsForm(forms.ModelForm):
 		
 		
 		fields = [
+			'name',
+			'surname',
 			'birthday',
 			'placeofbirth',
 			'finishedschool',
@@ -30,7 +32,9 @@ class StudentDetailsForm(forms.ModelForm):
 			
 			
 		]
-		labels = {'birthday': _('Dan,Mjesec i godina rođenja'),
+		labels = {'name': _('Ime'),
+				  'surname': _('Prezime'),
+				  'birthday': _('Dan,Mjesec i godina rođenja'),
 				  'placeofbirth': _('Mjesto i adresa rođenja '),
 				  'finishedschool': _('Ime završene škole'),
 				  'application': _('Molba za upis na smjer'),

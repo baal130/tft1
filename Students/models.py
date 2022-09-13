@@ -28,7 +28,8 @@ def uplodad_location_certificate(instance, filename):
 class StudentDetails(models.Model):
 	#user=models.ForeignKey(settings.AUTH_USER_MODEL,default=1)
 	user               =models.OneToOneField(User, on_delete=models.CASCADE) #user.userdetails
-	
+	name  =models.CharField(max_length=80,blank=False,null=False,default="Pero") 
+	surname  =models.CharField(max_length=80,blank=False,null=False,default="Perice")         
 	birthday=models.DateTimeField(auto_now_add=False,auto_now=False)
 	placeofbirth=models.CharField(max_length=80,blank=False,null=False,default="Zagreb")
 	finishedschool=models.CharField(max_length=80,blank=False,null=False, default="nije zavrsio")
