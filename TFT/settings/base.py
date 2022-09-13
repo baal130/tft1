@@ -31,18 +31,7 @@ SECRET_KEY = '_9sfr9be0ogbt7jz!5k9euc19af0gzt_0^bp$!xgcyzcv6&ws+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['baal130.webfactional.com']
 
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='baal130@gmail.com'
-EMAIL_HOST_PASSWORD='kizokita'
-EMAIL_PORT=587
-EMAIL_USE_TLS=1
-# EMAIL_HOST='mail.khorvatiya-online.ru'
-# EMAIL_HOST_USER='tetjana@khorvatiya-online.ru'
-# EMAIL_HOST_PASSWORD='a1b31734485'
-# EMAIL_PORT=587
-# EMAIL_USE_TLS=False
 
 
 # Application definition

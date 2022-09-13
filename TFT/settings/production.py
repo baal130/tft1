@@ -41,7 +41,7 @@ SECRET_KEY = '_9sfr9be0ogbt7jz!5k9euc19af0gzt_0^bp$!xgcyzcv6&ws+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','tft1.herokuapp.com',]
+ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','tft1.herokuapp.com',  'https://tft1.herokuapp.com']
 SERVICE_LIST = []
 
 # Application definition
