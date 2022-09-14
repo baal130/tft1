@@ -47,7 +47,8 @@ SERVICE_LIST = []
 # Application definition
 EMAIL_HOST='mail.idc.hr'
 EMAIL_HOST_USER='shop@idc.hr'
-EMAIL_HOST_PASSWORD='zoran-shop'
+EMAIL_HOST_PASSWORD=os.environ.get("EMAIL_HOST_PASSWORD",'none')
+
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
 DEFAULT_FROM_EMAIL ='shop@idc.hr'
@@ -251,8 +252,7 @@ DEFAULT_HTTP_PROTOCOL = "http" #url is created in allauth adapter.py line 97 nee
 
 
 AWS_ACCESS_KEY_ID = "AKIAWDFTQUMH57RFOZNM"
-AWS_SECRET_ACCESS_KEY = "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"
-
+AWS_SECRET_ACCESS_KEY =os.environ.get("AWS_SECRET_ACCESS_KEY ",'none')
 
 AWS_FILE_EXPIRE = 200
 AWS_PRELOAD_METADATA = True
