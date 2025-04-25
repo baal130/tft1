@@ -1,4 +1,4 @@
-# tft1
+# tft1 student signup for university
 1. #install python and add enviorment variables for python and pip
 2. in ./TFTapp/src/ run virtualenv .
 3 .pip install -r requirements.txt
